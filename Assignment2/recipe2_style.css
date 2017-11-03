@@ -1,0 +1,70 @@
+/* recipe2 style */ 
+
+
+body {
+	background-image: url("images/brickswall.gif");
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.page_border {
+	border: 20px #F8F8FF solid;
+	background-color: #F8F8FF;
+	font-family: Georgia, Garamond, Serif; 
+}
+
+.navigation {
+	list-style-type: none; 
+	background-color: #E0FFFF;
+	display: inline-block;
+	margin-left: 50px;
+}
+
+.navi {
+	padding: 10px; 
+	display: block;
+	color: #003366; 
+	text-decoration: none; 
+}
+
+
+.headings {
+	color: black;
+	background-color: #F8F8FF; 
+	text-align: center;
+	font-family: georgia; 
+}
+
+h3 {
+	text-align: left;
+	background-color: white; 
+	border: 1px solid black; 
+}
+
+span {
+	font-weight: bold; 
+}
+
+
+#caption {
+	text-align: center;
+}
+
+#image_box {
+float: left;
+
+}
+
+#ingredients {
+float: left;
+}
+
+#directions {
+	clear: both;
+}
+
+.ingredients_list {
+	list-style-image: url('images/bullet.png'); 
+}
+
+

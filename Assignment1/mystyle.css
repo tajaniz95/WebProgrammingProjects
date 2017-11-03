@@ -1,0 +1,158 @@
+
+.IndexList{
+	background-color: none;
+	text-align: center;
+	color: none;
+	margin-bottom: -10px;
+}
+
+#IndexList {
+    list-style-type: none;
+    text-indent: 70px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+
+}
+
+.IndexIcons {
+    float: left;
+}
+
+.IndexIcons a {
+    display: block;
+    color: none;
+    text-align: left;
+    padding: 10px;
+    text-decoration: none;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+.container {
+	background-color: #ffffff;
+}
+
+.intro-box {
+		background-color: #f2f2f2;
+}
+
+#intro { 
+	padding: 10px;
+	text-align: center;
+}
+
+#bio-pic {
+	height: 300px;
+	width: 300px;
+	border-radius: 10px;
+	transform: rotate(90deg);
+}
+
+.intro-items {
+	text-align: center; 
+}
+
+#title { 
+	padding-top: 5px; 
+}
+
+#sub-title { 
+	padding-bottom: 5px; 
+}
+
+.biography {
+	padding: 30px;
+}
+
+#bio {
+	vertical-align: center;
+	float: center;
+	padding: 30px;
+	padding-right: 60px;
+}
+
+#biotext {  }
+
+.h3-title {
+	text-align: left;
+	padding-left: 30px;
+}
+
+.images {
+	border-radius: 8px; 
+}
+
+#tvshows li:last-child {
+	padding-right: 0px;
+}
+.hobbies {
+	text-align: left;
+}
+
+#h3-hobbies{	}
+
+#hobbies li {
+	list-style-type: none;
+}
+
+.unordered_list1 {
+	list-style-type: circle;
+}
+.unordered_list2 {
+	list-style-type: square;
+}
+
+.quote {
+	background-color: #f2f2f2;
+	text-align: center;
+	margin-left: 275px;
+	margin-right: 275px;  
+	border-radius: 8px; 
+}
+
+a:link {
+	color: blue;
+}
+a:hover {
+	background-color: red;
+}
+a:visited {
+	color: black;
+}
+
+table {
+	border: 0px; 
+	width: 80%; 
+	margin: auto;
+} 
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+th {
+	background-color: #C0C0C0; 
+	color: black;  
+	text-align: left;
+}
+
+span {
+	color: red; 
+	font-weight: bold;
+}
+
+.footer {
+	margin-bottom: 25px; 
+	padding-left: 30px; 
+}
+
+.social {
+	padding-left: 30px; 
+}
+
+address {
+	padding-left: 30px; 
+}

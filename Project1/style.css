@@ -1,0 +1,26 @@
+body{
+	background-image: url('background.gif');
+
+}
+
+p {
+	color: blue;
+	text-align: center-left;
+	font-family: sans-serif;
+	font-size: 24px;
+}
+
+a{
+	margin-left: 10%;
+	color: red;
+}
+
+.container {
+	background-color: black;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#music{
+	margin-left: 10%;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<title>Shuffle an array</title>
+	</head>
+	
+	<body>
+		<script>
+			function shuffle(arra1) {
+				var ctr = arra1.length, temp, index;
+				while (ctr > 0) { // While there are elements in the array
+					index = Math.floor(Math.random() * ctr); // Pick a random index
+					ctr--; // Decrease ctr by 1
+					temp = arra1[ctr]; // And swap the last element with it
+					arra1[ctr] = arra1[index];
+					arra1[index] = temp;
+				}
+				return arra1;
+			}
+			var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+			document.write(shuffle(myArray));
+		</script>
+	</body>
+</html>

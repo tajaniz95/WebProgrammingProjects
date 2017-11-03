@@ -1,0 +1,23 @@
+/* Checkerboard Style Sheet*/
+
+table {
+	width: 300px; 
+
+}
+
+td {
+	height: 35px; 
+	width: 35px; 
+	padding: 1px; 
+	border-spacing: 1px; 
+	border-collapse: separate; 
+	border: 1px; 
+}
+
+.red {
+	background-color: red; 
+} 
+
+.black {
+	background-color: black; 
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form name="myForm" method="POST">
+	<p><input type="text" name="textbox" value=""></p>
+	<p><input type="text" name="textbox2" value=""></p>
+	<button name="submitButton" onclick="checkExpression();">Click me</button>
+	<script type="text/javascript">
+		function checkExpression(){
+			var myRegExp = /\w+[@]\w+.gsu.edu/;
+			var input = document.forms[0].textbox.value;
+			var input2 = document.forms[0].textbox2.value;
+			if(input == input2){
+				alert("Both fields are the SAME GSU emails");
+			}
+			else{
+				alert("Both fields are NOT the same GSU emails");
+			}
+		}
+	</script>
+<p id="demo"></p>
+
+</body>
+</html>

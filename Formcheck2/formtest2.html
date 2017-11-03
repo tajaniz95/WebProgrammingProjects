@@ -1,0 +1,81 @@
+
+<head>
+  <title>HTML Form</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    fieldset { background-color: #c8fbc8 }
+  </style>
+</head>
+<body>
+<h1>Sign Up Now!</h1>
+
+<!-- action attribute deliberately omitted here: form data will be
+     submitted to same URL -->
+<form method="post">
+
+<fieldset>
+<legend><b><i>Enter Information</i></b></legend>
+
+<p>
+<label for="yourName">Your Name:</label>
+  <input name="visitor_name" id="yourName" type="text" value="Harry Bovik" /></p>
+<p>
+<label for="password">Password:</label>
+  <input name="password" id="password" type="password" value="TopSecret" /></p>
+<p>
+
+<label><input name="licenseOK" type="checkbox" />
+  I accept</label> the license conditions.</p>
+
+<p>
+Specify account type desired:
+<br />
+<input name="account_type" id="basicAccount" type="radio" value="basic" />
+ <label for="basicAccount">Basic ($25)</label>
+<br />
+<input name="account_type" id="standardAccount" type="radio" value="standard" checked="checked" />
+ <label for="standardAccount">Standard ($50)</label>
+<br />
+<input name="account_type" id="deluxeAccount" type="radio" value="deluxe" />
+ <label for="deluxeAccount">Deluxe ($100)</label>
+<br />
+<input name="userid" type="hidden" value="137273" /></p>
+
+<p>
+Select your operating system:
+<select name="system">
+  <option selected="selected"> Windows</option>
+  <option> Mac</option>
+  <option> Unix</option>
+</select></p>
+
+<!-- For multiple select, name includes brackets so it will be made
+     into an array at the server.  This is the PHP convention. -->
+<p>
+Select your optional features:
+<select name="options[]" size="3" multiple="multiple">
+  <option selected="selected">Chat</option>
+  <option>Email</option>
+  <option>File transfer</option>
+  <option>Directory</option>
+  <option>Shell</option>
+  <option>Remote control</option>
+</select></p>
+
+<p>
+Please write your comments here.
+<br />
+<textarea name="remarks" rows="10" cols="25">
+I'm very pleased with your service!!!
+</textarea></p>
+
+<p>
+<input type="submit" value="Sign Up" />
+<input type="reset" /></p>
+</fieldset>
+</form>
+<?php
+  } // end of ! $_POST
+?>
+</body>
+</html>

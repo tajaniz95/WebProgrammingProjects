@@ -1,0 +1,104 @@
+body{
+    background-color: skyblue;
+}
+.game{
+    width:1280px;
+    height:720px;
+    position: absolute;
+    left: 20%;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+#total{
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 3px;
+    width:220px;
+    height: 160px;
+    text-align: center;
+    background-color: red;
+    margin-left: 30px;
+    margin-top: 30px;
+    float: left;
+}
+
+.card{
+    width:195px;
+    height: 140px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: yellow;
+    margin-left:9px;
+}
+
+input[type=checkbox]:checked ~ #one{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/3/32/PrentissS12.jpg/revision/latest?cb=20170922002841");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #two{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/5/53/Jason_Gideon.JPG/revision/latest?cb=20100328164006");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #three{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/5/52/S10_-_DR_1.jpg/revision/latest?cb=20171001035939");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #four{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/9/96/Penelope_Garcia.jpg/revision/latest?cb=20171002223412");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #five{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/9/95/S10_-_DM_1.jpg/revision/latest?cb=20170528045519");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #six{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/f/f9/Tara_Lewis.jpg/revision/latest?cb=20171001011242");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #seven{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/2/29/S10_-_SR_1.jpg/revision/latest?cb=20170930235508");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #eight{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/b/bd/Zzz-luke.png/revision/latest?cb=20160929023546");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #nine{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/5/54/JJ_-_S13.jpg/revision/latest?cb=20170927052424");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #ten{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/b/b5/StephenWalker.jpg/revision/latest?cb=20170211225156");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #eleven{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/4/47/S10_-_AH_1.jpg/revision/latest?cb=20170528045715");
+    background-size: 220px 160px;
+}
+input[type=checkbox]:checked ~ #twelve{
+    background-image: url("https://vignette.wikia.nocookie.net/criminalminds/images/b/b6/S9_Alex_Blake_1.jpg/revision/latest?cb=20170527050714");
+    background-size: 220px 160px;
+}
+img{
+    border-radius: 25px;
+    height:130px;
+    width:170px;
+}
+#click{
+    font-weight:bold;
+	font-family: verdana;
+	font-size: 18px;
+}
+span{
+    background-color: white;
+    border-radius: 4px;
+}
+#title{
+    background-color: yellow;
+    text-align: center;
+}

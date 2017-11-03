@@ -1,0 +1,52 @@
+/* program1.css */
+
+body {
+	margin: auto; 
+	background-color: lightblue; 
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #333; 
+	overflow: hidden;
+}
+
+li {
+	display: inline; 
+	padding-right: 50px;
+	padding-left: 50px; 
+	float: right;
+}
+
+/* dont understand this block */
+.link {	
+	display: block; 
+	padding: 14px 16px;
+	color: white; 
+	text-decoration: none;
+		font-size: 12pt; 
+}
+
+.link:hover {
+	background-color: #111; 
+	color: #4CAF50; 
+}
+
+h1,p {
+	text-align: center;
+}
+
+
+.footer {
+	margin-bottom: 25px; 
+	padding-left: 30px; 
+}
+
+
+
+
+	
+
+
