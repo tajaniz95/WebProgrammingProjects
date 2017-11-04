@@ -1,54 +1,54 @@
-function LoadFirst() {
+function LoadArrow() {
   	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     	document.getElementById("First").innerHTML = this.responseText;
+     	document.getElementById("Arrow").innerHTML = this.responseText;
     	}
   	};
- 	xhttp.open("GET", "FirstInfo.txt", true);
+ 	xhttp.open("GET", "Arrow.txt", true);
   	xhttp.send();
 }	
 
-function LoadSecond() {
+function LoadCriminalMinds() {
   	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     	document.getElementById("Second").innerHTML = this.responseText;
+     	document.getElementById("Criminal Minds").innerHTML = this.responseText;
     	}
 	};
- 	xhttp.open("GET", "SecondInfo.txt", true);
+ 	xhttp.open("GET", "CriminalMinds.txt", true);
   	xhttp.send();
 }	
 
-function LoadThird() {
+function LoadTheFlash() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		document.getElementById("Third").innerHTML = this.responseText;
+		document.getElementById("The Flash").innerHTML = this.responseText;
 	    }
   	};
-	xhttp.open("GET", "ThirdInfo.txt", true);
+	xhttp.open("GET", "TheFlash.txt", true);
 	xhttp.send();
 }
 
-function LoadFourth() {
+function LoadInhumans() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		document.getElementById("Fourth").innerHTML = this.responseText;
+		document.getElementById("Inhumans").innerHTML = this.responseText;
 	    }
   	};
-	xhttp.open("GET", "FourthInfo.txt", true);
+	xhttp.open("GET", "Inhumans.txt", true);
 	xhttp.send();
 }	
 
-function LoadFifth() {
+function LoadTheGifted() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 	if (this.readyState == 4 && this.status == 200) {
-		document.getElementById("Fifth").innerHTML = this.responseText;
+		document.getElementById("The Gifted").innerHTML = this.responseText;
 	    }
   	};
-	xhttp.open("GET", "FifthInfo.txt", true);
+	xhttp.open("GET", "TheGifted.txt", true);
 	xhttp.send();
 }
