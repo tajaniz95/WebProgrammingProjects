@@ -9,7 +9,7 @@ $(document).ready(function () {
 }); 
 
 $(document).ready(function(){
-    $("button").click(function(){
+    $("Wire Transfer").click(function(){
         $("p").text("Transfer the amount to: reg. $957.00, to account 0009286322");
     });
 });
