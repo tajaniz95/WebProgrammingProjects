@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+		<script type="text/javascript" src="grid.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<h1>Conway's Game Of Life</h1>
+	
+	<button id = 'step' class = "button"> Step </button>
+	<button id = 'step23' class = "button"> Step 23 </button>
+	<button id = 'reset' class = "button"> Reset </button>
+	<button id = "random" class = "button" value="false" onclick="changeValue();"> Run </button>
+	<!--Give button a true/false value. Onclick change value and then use this id on app.js to run or stop-->
+	<input class = "input" type = "text" name = "size" id = "size">
+	<button id = 'btn' class = "button" onclick="game_start();"> Draw Game </button>
+	<canvas id="game">
+		
+	</canvas>
+</body>
+</html>
