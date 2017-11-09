@@ -1,38 +1,34 @@
-// Any live cell with fewer than two live neighbours dies, as if caused by under-population.
-// Any live cell with two or three live neighbours lives on to the next generation.
-// Any live cell with more than three live neighbours dies, as if by overcrowding.
-// Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-
-
+//Function to define the structure of the Cell
 var Cell = function(x,y, _cells){
-	var me = this;
+	var game = this;
 
-	me.isAlive = false;
-	me.x = x;
-	me.y = y;
-	me.distance = function(cell){
-		return Math.abs(cell.x - me.x) + Math.abs(cell.y - me.y);
+	game.isAlive = false;
+	game.x = x;
+	game.y = y;
+	game.distance = function(cell){
+		return Math.abs(cell.x - game.x) + Math.abs(cell.y - game.y);
 	};
 
-	me.neighbors = null;	
+	game.neighbors = null;	
 
-	me.countNeighbors = function(){
-		return me.neighbors.filter(function(cell){
+	game.countNeighbors = function(){
+		return game.neighbors.filter(function(cell){
 			return cell.isAlive;
 		}).length;
 	};
 
-	return me;
+	return game;
 };
 
 
 var Grid = function(width, height){
-	var me = this;
+	var game = this;
 	var _cells = new Array(width*height);
 
 	var _living = [];
 
-	// instantiate cells
+
+	//place cells
 	for(var i = 0; i < width; i++){
 		for(var j = 0; j < height; j++){
 			(function(){
@@ -41,7 +37,7 @@ var Grid = function(width, height){
 		}
 	}
 
-	// assign neighbors
+	//give neighbors
 	_cells.forEach(function(cell){
 		cell.neighbors = _cells.filter(function(cell2){
 			var dx = Math.abs(cell2.x - cell.x);
@@ -51,47 +47,55 @@ var Grid = function(width, height){
 	});
 
 
-	me.filter = function(fcn){
+	game.filter = function(fcn){
 		return _cells.filter(fcn);
 	};
 
-	me.updateLiving = function(){
+	//Updateing the Canvas upon the 4 rules of the game
+	game.updateLiving = function(){
 		
-
+		
+		//Cell will die if the neighbors > 3 due to overcrowding
 		var deadOvercrowded = _cells.filter(function(cell){
 			return cell.isAlive && (cell.countNeighbors() > 3);
 		});
 
+		//Cell will die if the neighbors < 2 due to undercrowding
 		var deadUnderpop = _cells.filter(function(cell){
 			return cell.isAlive && (cell.countNeighbors() < 2);
 		})
 
 		
 
+		//Reproducing cells when there are 3 neighbors around a nonliving cell
 		var reproduction = _cells.filter(function(cell){
 			return !cell.isAlive && cell.countNeighbors() === 3;
 		});
 
+		//Cell lives on if there are 2 || 3 living neighbors around the living cell
 		var livesOn = _cells.filter(function(cell){
 			return cell.isAlive && (cell.countNeighbors() === 2 || cell.countNeighbors() === 3);
 		});
 
+		//for loop to kill all the cells from over and under population
 		deadOvercrowded.concat(deadUnderpop).forEach(function(cell){
 			cell.isAlive = false;
 		});
 
+		//cells will come alive 
 		reproduction.forEach(function(cell){
 			cell.isAlive = true;
 		});
+		//cells will live on
 		livesOn.forEach(function(cell){
 			cell.isAlive = true;
 		});
 
 	};
 
-	me.getCell = function(x,y){
+	game.getCell = function(x,y){
 		return _cells[x+y*width];
 	};
 
-	return me;
+	return game;
 }
