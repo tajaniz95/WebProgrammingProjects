@@ -4,9 +4,9 @@
 // Name VARCHAR(25) ;
 
 $host = "localhost"; 
-$user = "user12"; 
-$pass = "user12"; 
-$db = "mydb"; 
+$user = "ztajani1"; 
+$pass = "ztajani1"; 
+$db = "ztajani1"; 
 
 $r = mysql_connect($host, $user, $pass);
 

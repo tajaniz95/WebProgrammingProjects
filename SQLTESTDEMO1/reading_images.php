@@ -3,9 +3,9 @@
 //mysql> CREATE TABLE Images(Id INT PRIMARY KEY AUTO_INCREMENT, Data MEDIUMBLOB);
 
 $host = "localhost"; 
-$user = "user12"; 
-$pass = "user12"; 
-$db = "mydb"; 
+$user = "ztajani1"; 
+$pass = "ztajani1"; 
+$db = "ztajani1"; 
 
 $r = mysql_connect($host, $user, $pass);
 
