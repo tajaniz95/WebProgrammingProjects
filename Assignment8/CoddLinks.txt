@@ -1,0 +1,7 @@
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/login.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/artist.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/artistform.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/db.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/index.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/registration.php
+http://codd.cs.gsu.edu/~ztajani1/Assignment8/viewalbum.php
