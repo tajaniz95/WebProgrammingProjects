@@ -165,7 +165,7 @@ if( isset($_POST['addcart']) ) {
 			<br><br>
 			<input type="text" placeholder="Pickup" name="pickupdate" size="30" id ="calendar">
 			<select name="pickuptime">
-				<option value="0">Time:00</option>
+				<option value="0">00</option>
 				<option value="2">01</option>
 				<option value="2">02</option>
 				<option value="3">03</option>
@@ -190,13 +190,13 @@ if( isset($_POST['addcart']) ) {
 				<option value="8">23</option>
 			</select> 
 			<select name="min">
-				<option value="0">Time:00</option>
-				<option value="1">Time:30</option>
+				<option value="0">00</option>
+				<option value="1">30</option>
 			</select>
 			<br><br>
 			<input type="text" placeholder="Drop off" name="pickup" size="30" id="calendar1"> 
 			<select name="dropofftime">
-				<option value="0">Time:00</option>
+				<option value="0">00</option>
 				<option value="2">01</option>
 				<option value="2">02</option>
 				<option value="3">03</option>
@@ -221,8 +221,8 @@ if( isset($_POST['addcart']) ) {
 				<option value="8">23</option>
 			</select> 
 			<select name="min1">
-				<option value="0">Time:00</option>
-				<option value="1">Time:30</option>
+				<option value="0">00</option>
+				<option value="1">30</option>
 			</select>
 			<br>
 		</div>
@@ -231,10 +231,10 @@ if( isset($_POST['addcart']) ) {
 		<h5>Parking Booking</h5>
 			Parking Type:
 			<select name="parking">
-				<option value="blue">Blue Parking</option>
-				<option value="red">Red Parking</option>
-				<option value="green">Green Parking</option>
-				<option value="gold">Gold Parking *TRENDING*</option>
+				<option value="blue">Economy Parking</option>
+				<option value="red">Business Parking</option>
+				<option value="green">Luxury Parking</option>
+				<option value="gold">VIP Parking</option>
 			</select>
 			<br><br>
 			<input type="submit" name="addcart"value="Add to Cart"/>

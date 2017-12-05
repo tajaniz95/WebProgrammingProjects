@@ -1,6 +1,6 @@
 <?php session_start();?>
 <?php 
-include 'header.php';
+ include 'header.php';
  include_once 'dbconnect.php';
  $result = mysqli_query($conn, "SELECT * FROM inventory");
  if($_SESSION['user'] == 'admin')

@@ -8,7 +8,7 @@
  
  // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
-  header("Location: home.php");
+ // header("Location: home.php");
   exit;
  }
  
@@ -39,7 +39,7 @@
   // if there's no error, continue to login
   if (!$error) {
    
-   $password = hash('sha256', $pass); // password hashing using SHA256
+   $password = $pass; // password hashing using SHA256
   
    $res=mysqli_query($conn, "SELECT username, password FROM customers WHERE username='$username'");
    $row=mysqli_fetch_array($res, MYSQLI_ASSOC);
@@ -47,7 +47,7 @@
    
    if( $count == 1 && $row['password']==$password ) {
     $_SESSION['user'] = $row['username'];
-    header("Location: home.php");
+    //header("Location: home.php");
 	
    } else {
     $errMSG = "Incorrect Credentials, Try again...";

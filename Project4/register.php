@@ -1,8 +1,14 @@
+<?php session_start();?>
+<!--Allow users to register to the website. 
+	Registration requires usernames to have at least 3 characters, and only accepts alphabets and whitespaces
+	Password needs to be at least 6 characters
+	EXTRA CREDIT - Password is hashed before saving to database (Varchar limit too small)
+-->
+
 <?php
  ob_start();
- session_start();
  if( isset($_SESSION['user'])!="" ){
-  header("Location: home.php");
+ // header("Location: home.php");
  }
  include_once 'dbconnect.php';
 
@@ -59,14 +65,13 @@
   }
   
   // password encrypt using SHA256();
-  $password = hash('sha256', $pass);
+  $password = $pass;
   
   // if there's no error, continue to signup
   if( !$error ) {
    
    $query = "INSERT INTO customers(username,email,password) VALUES('$name','$email','$password')";
    $res = mysqli_query($conn, $query);
-    
    if ($res) {
     $errTyp = "success";
     $errMSG = "Successfully registered, you may login now";

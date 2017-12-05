@@ -83,7 +83,11 @@ if( isset($_POST['addcart']) ) {
 	$_SESSION['car'] = $cartype;
 	$_SESSION['flightnumber'] = $flightNumber;
 	$_SESSION['seatnumber'] = $seatNumber;
-	header("Location: shoppingcart.php");
+	//header("Location: shoppingcart.php");
+	//Use JavaScript to switch between pages since we are getting error with location
+	$URL="shoppingcart.php";
+    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+
     exit();
   } 
  }
@@ -105,9 +109,9 @@ if( isset($_POST['addcart']) ) {
 			 <br><br>
 			 <input type ="checkbox" name="oneway" value="One Way">One Way
 			 <input type ="checkbox" name="twoway" value="Two Way">Two Way
-			 <br>
+			 <br>Number of Tickets: 
 			 <select name="person">
-				<option value="1">Adults:1</option>
+				  <option value="1">1</option>
 				  <option value="2">2</option>
 				  <option value="3">3</option>
 				  <option value="4">4</option>
@@ -116,7 +120,7 @@ if( isset($_POST['addcart']) ) {
 				  <option value="7">7</option>
 				  <option value="8">8</option>
 			 </select>
-			 <br/><br/>
+			 <br/>
 			 Flight Number: 
 			 <select id='pick' name='flightNumber'>
 			 <?php
@@ -161,7 +165,7 @@ if( isset($_POST['addcart']) ) {
 			<br><br>
 			<input type="text" placeholder="Pickup" name="pickupdate" size="30" id ="calendar">
 			<select name="pickuptime">
-				<option value="0">Time:00</option>
+				<option value="0">00</option>
 				<option value="2">01</option>
 				<option value="2">02</option>
 				<option value="3">03</option>
@@ -186,13 +190,13 @@ if( isset($_POST['addcart']) ) {
 				<option value="8">23</option>
 			</select> 
 			<select name="min">
-				<option value="0">Time:00</option>
-				<option value="1">Time:30</option>
+				<option value="0">00</option>
+				<option value="1">30</option>
 			</select>
 			<br><br>
 			<input type="text" placeholder="Drop off" name="pickup" size="30" id="calendar1"> 
 			<select name="dropofftime">
-				<option value="0">Time:00</option>
+				<option value="0">00</option>
 				<option value="2">01</option>
 				<option value="2">02</option>
 				<option value="3">03</option>
@@ -217,8 +221,8 @@ if( isset($_POST['addcart']) ) {
 				<option value="8">23</option>
 			</select> 
 			<select name="min1">
-				<option value="0">Time:00</option>
-				<option value="1">Time:30</option>
+				<option value="0">00</option>
+				<option value="1">30</option>
 			</select>
 			<br>
 		</div>
@@ -227,13 +231,13 @@ if( isset($_POST['addcart']) ) {
 		<h5>Parking Booking</h5>
 			Parking Type:
 			<select name="parking">
-				<option value="blue">Blue Parking</option>
-				<option value="red">Red Parking</option>
-				<option value="green">Green Parking</option>
-				<option value="gold">Gold Parking *TRENDING*</option>
+				<option value="blue">Business Parking</option>
+				<option value="red">Economy Parking</option>
+				<option value="green">Luxury Parking</option>
+				<option value="gold">VIP Parking</option>
 			</select>
 			<br><br>
-			<input type="submit" name="addcart"value="Add to Cart"/>
+			<input type="submit" name="addcart" value="Add to Cart"/>
 		</div>
 		</form>
 		<div id ="clear"></div>

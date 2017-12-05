@@ -1,6 +1,7 @@
+<?php session_start();?>
+
 <?php
  ob_start();
- session_start();
  include_once 'dbconnect.php';
 
 
@@ -15,16 +16,22 @@
 	
 	$query = "INSERT INTO orders(Username, Parking, FlightNumber, SeatNumber, RentalCar, FlightInfo, DateofOrder) VALUES('$username', '$parking', '$flightNum', '$seatNum', '$car', '$travel', '$today')";
 	$res = mysqli_query($conn, $query);
+
+//  Debugging
+//  var_dump($query);
+//  var_dump($res);
     
 	if ($res) {
-		$query = "Update inventory set Available=0 where FlightNumber='$flightNum' AND SeatNumber='$seatNum'";
+		$query = "UPDATE inventory set Available=0 WHERE FlightNumber='$flightNum' AND SeatNumber='$seatNum'";
 		$res = mysqli_query($conn, $query);
 		$_SESSION['travelinfo'] = "";
 		$_SESSION['flightnumber'] = "";
 		$_SESSION['seatnumber'] = "";
 		$_SESSION['parking'] = "";
 		$_SESSION['car'] = "";
-		header("Location: home.php");
+    //Use JavaScript to switch between pages since we are getting error with header(Location:)
+    $URL="inventory.php";
+    echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
 		exit();
 	} else {
 	   echo '<script>alert("Something went wrong, try again later...");</script>';
@@ -40,7 +47,7 @@
 			<li>Seat Number: <?php echo $_SESSION['seatnumber'];?></li>
 			<li>Parking: <?php echo $_SESSION['parking'];?></li>
 			<li>Car Info: <?php echo $_SESSION['car'];?></li>
-		
+			<li>Price: $500</li>
 		</ul>
 	
 	
