@@ -8,7 +8,7 @@
  
  define('DBHOST', 'localhost');
  define('DBUSER', 'root');
- define('DBPASS', '');
+ define('DBPASS', 'pass');
  define('DBNAME', 'final_project');
  
  $conn = mysqli_connect(DBHOST,DBUSER,DBPASS,DBNAME);
